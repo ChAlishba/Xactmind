@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xactmind</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+  .nav-item {
+    color: blue;
+    font-size: large;
+    font-weight: bold;
+    font-family:"Inter Tight", sans-serif;
+    
+  }
+  .nav-item a:hover{
+    color: blue;
+  }
+  .nav-link{
+    font-family:"Inter Tight", sans-serif;
+  }
+  .logo{
+    height: 70px;
+    width: 100%;
+  }
+  h1{
+    font-weight: bold;
+    font-size: 50px;
+  }
+  .btn {
+          
+          color: #fff;
+            border-radius: 10px;
+            padding: 10px 30px;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+            font-weight: bold;
+  }
+  .sec-5{
+    background: #8f94fb;
+      padding: 60px 0;
+
+  }
+  .sec-2{
+    font-family: "Inter Tight", sans-serif;
+    font-weight: 400px;
+    font-size: 50px;
+    color: #0a0d31;
+    justify-content: center;
+  }
+  .sec-4{
+    font-family: "Inter Tight", sans-serif;
+    font-weight: 400px;
+    font-size: 50px;
+    color: #0a0d31;
+    justify-content: center;
+  }
+  .object-fit-sm-contain{
+    height: 420px;
+  }
+  
+/*Section 3*/
+.stats-section {
+            text-align: center;
+            padding: 20px 0;
+        }
+        .stats-item {
+            border-right:  4px solid #ddd;
+        }
+       
+        .stats-item:last-child {
+            border-right: none;
+        }
+        .stats-item:first-child {
+            border-left: 4px solid #ddd ;
+        }
+        .stats-number {
+            font-size: 2em;
+            font-weight: bold;
+            color:#0a0d31 ; 
+            line-height: 36px;
+        }
+        .stats-label {
+            font-size: 1em;
+            color: #242627;
+            font-family: Helvetica;
+            line-height: 22px;
+            font-size: 16px;
+            font-weight: 400px;
+        }
+        /*Section 3*/
+        .object-fit-cover{
+          height: 400px;
+          border-radius: 40px;  
+        }
+        .img-fluid{
+          border-radius: 10px;
+        }
+        /*Section 5*/
+        .services-section {
+            background: linear-gradient(to bottom, #c2d3f7, #e5d4f3);
+            padding: 50px 50px;
+            
+        }
+        .services-section h1 {
+            color: black; 
+            margin-bottom: 30px;
+        }
+        .service-card h2:hover{
+          color:#1461e6;
+        }
+        .service-card {
+            border: none;
+            border-radius: 0px 2px;
+            transition: transform 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .service-card:hover {
+            transform: translateY(-10px);    
+        }
+        .service-card h1:hover{
+          color: #1461e6;
+
+        }
+      
+        .btn-view-all {
+            background-color: #4B2E83;
+            color: #fff;
+            font-weight: bold;
+            border-radius: 20px;
+            padding: 10px 30px;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+        .btn-view-all:hover {
+            background-color: #3A216A;
+        }
+        /*secton 7*/
+        .accordion-button{
+          font-family:"Inter Tight", sans-serif ;
+          font-weight: bold;
+    font-size: 30px;
+        }
+        
+       .accordion-body{
+        font-weight: 400px;
+        color:rgba(0, 0, 0, 0.6);
+        font-family: Helvetica;
+        font-size: 20px;
+       }
+      
+      .sec-7 .heading{
+        background-color:blue;
+        color: #fff;
+
+      }
+      .sec-7  .column{
+        color:black;
+        font-weight: 100px;
+
+      }
+      /*last part*/
+      .footer {
+    margin-top: 20px;
+    width: 100%;
+    padding: 40px 20px; 
+    background: #f1f1f1; 
+    color: black;
+    display: flex;
+    justify-content: space-around; 
+    gap: 1em; 
+    text-align: center;
+    flex-wrap: wrap; 
+}
+
+
+
+
+
+
+
+
+.footer1{
+  color:black;
+  font-family:  Helvetica;
+
+}
+
+
+
+.copyright{
+  font-size: 1rem;
+  text-align: center;
+}
+.section-1{
+  background:linear-gradient(to bottom, #c2d3f7, #e5d4f3);
+}
+
+
+
+
+
+
+
+       
+       
+
+  </style>
+
+  </head>
+<body>
+    <!--Section 1-->
+    <section class="sec-1">
+      <div class="container py-4 my-4 ">
+        <nav class="navbar  navbar-expand-lg navbar-light bg-transparent">
+            <a class="navbar-logo" href="#"><img class="logo" src="./cropped-xactmind-black-logo.png" alt="img"></a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end text-center" id="navbarNav">
+                <ul class="navbar-nav  align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Company</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Resources</a></li>
+                    <li class="nav-item"><a class="btn btn-primary mt-0" href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+      </section>
+      <!--Section 2-->
+    <section class="sec-2">
+        <div class="container  py-7 my-5 ">
+            <div class="row " >
+                <div class="col-md-6 ">
+                    <h1>Xact Mind is a UK based leading Software and AI development company</h1>
+                    <h2>providing comprehensive Software and AI solutions tailored to meet the evolving needs of customers and businesses.</h2>
+                    <button type="button" class="btn btn-primary btn-sm ">Schedule a Free Consultation</button>
+                    <button type="button" class="btn btn-secondary btn-sm">Services</button>
+                    
+                
+                  </div>
+                <div class="col-md-6">
+                  <img src="./sec-2.png" class="img-fluid " style="clip-path: polygon(22% 0, 100% 0, 100% 75%, 100% 100%, 57% 100%, 0 100%, 22% 60%);" alt="...">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Section 3-->
+    <section class="sec-3">
+      <div class="container stats-section">
+        <div class="row">
+            <div class="col-md-3 stats-item">
+                <div class="stats-number">02 Years</div>
+                <div class="stats-label">Proven Track Record</div>
+            </div>
+            <div class="col-md-3 stats-item">
+                <div class="stats-number">100%</div>
+                <div class="stats-label">Customer Satisfaction</div>
+            </div>
+            <div class="col-md-3 stats-item">
+                <div class="stats-number">100+ Projects</div>
+                <div class="stats-label">We Have Completed</div>
+            </div>
+            <div class="col-md-3 stats-item">
+                <div class="stats-number">5 Mins</div>
+                <div class="stats-label">Average Answer Time</div>
+            </div>
+        </div>
+    </div>
+    </section>
+    <!--Section 4-->
+    <section class="sec-4">
+      <div class="container py-5 my-4">
+      <div class="row ">
+        <div class="col-md-6 col-sm-12 ">
+          <h1>Discover Our Story​</h1>
+          <h2>Xact Mind is a UK based leading Software and AI development company, providing comprehensive AI solutions tailored to meet the evolving needs of customers & businesses. We take pride in crafting intelligent systems that propel businesses to new heights. Our commitment is to pave the exact path to intelligent solutions, ensuring precision and innovation in every project.</h2>
+          <button class="btn">About Us</button>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <video src="./xactmind-home-video.mp4" class="img-fluid  " autoplay></video>
+
+        </div>
+      </div>
+      </div>
+    </section>
+    <!--Section 5-->
+    <sction class="sec-5 ">
+      <div class="container-fluid services-section   my-5  py-4  ">
+        <h1>Our Services</h1>
+        <div class="row ">
+          <div class="col-md-4 mb-4 md-4 ">
+            <div class="card service-card p-4 h-100">
+              <i class="fas fa-database py-3" style="color: #1461e6; font-size: 60px; "></i>
+              <h2 class="card-title">AI Development Services</h2>
+              <p class="card-text" style="font-size: 20px;">Unlock the power of artificial intelligence with Xact Mind's comprehensive AI development services. Our expert team combines cutting-edge technologies and innovative solutions to craft intelligent systems tailored to meet the evolving needs of businesses.</p>
+              <a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-25 link-underline-opacity-75-hover" href="#">
+              Learn More
+              </a>
+          </div>
+    
+          </div>
+          
+          <div class="col-md-4 mb-4 md-4 ">
+            <div class="card service-card p-4 h-100">
+              <i class="fas fa-database py-3" style="color: #1461e6; font-size: 60px;"></i>
+              <h2 class="card-title">Machine And Deep Learning</h2>
+              <p class="card-text" style="font-size: 20px;">Our specialized services harness the power of advanced algorithms and neural networks to drive business innovation. From developing intricate models to implementing cutting-edge solutions, we delve into the realms of machine and deep learning, ensuring your business stays ahead in the era of artificial intelligence.</p>
+              <a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-25 link-underline-opacity-75-hover" href="#">
+              Learn More
+              </a>
+          </div>
+    
+          </div>
+          <div class="col-md-4 mb-4 md-4 ">
+            <div class="card service-card p-4 h-100">
+              <i class="fas fa-database py-3" style="color: #1461e6; font-size: 60px;"></i>
+              <h2 class="card-title">Data Analytics & Visualization</h2>
+              <p class="card-text" style="font-size: 20px;">Our experts employ advanced analytical techniques and visualization tools to extract meaningful insights from your data. Whether it's identifying trends, making data-driven decisions, or creating insightful dashboards, we provide comprehensive solutions tailored to your business needs.</p>
+              <a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-25 link-underline-opacity-75-hover" href="#">
+              Learn More
+              </a>
+          </div>
+    
+          </div>
+          <div class="col-md-4 mb-4 md-4 ">
+            <div class="card service-card p-4 h-100">
+              <i class="fas fa-database py-3" style="color: #1461e6; font-size: 60px;"></i>
+              <h2 class="card-title">Natural Language Processing</h2>
+              <p class="card-text" style="font-size: 20px;">Leveraging cutting-edge techniques and technologies, we specialize in analyzing, interpreting, and generating human-like text. From sentiment analysis and text classification to chatbot development and language translation, our NLP solutions enhance your business processes.</p>
+              <a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-25 link-underline-opacity-75-hover" href="#">
+              Learn More
+              </a>
+          </div>
+    
+          </div>
+          <div class="col-md-4 mb-4 md-4 ">
+            <div class="card service-card p-4 h-100">
+              <i class="fas fa-database py-3" style="color: #1461e6; font-size: 60px;"></i>
+              <h2 class="card-title">Chatbots & Generative AI</h2>
+              <p class="card-text" style="font-size: 20px;">Our Generative AI capabilities empower you to create dynamic and creative content, from text to images. Whether it's automating customer support or generating unique content, Xact Mind's Chatbots & Generative AI solutions bring innovation and efficiency to your business processes.</p>
+              <a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-25 link-underline-opacity-75-hover" href="#">
+              Learn More
+              </a>
+          </div>
+    
+          </div>
+          <div class="col-md-4 mb-4 md-4 ">
+            <div class="card service-card p-4 h-100">
+              <i class="fas fa-database py-3" style="color: #1461e6; font-size: 60px;"></i>
+              <h2 class="card-title">Web Scraping & Automation</h2>
+              <p class="card-text" style="font-size: 20px;">Our expertise in web scraping, coupled with robust automation solutions, ensures efficiency and accuracy in handling large-scale data. Whether it's market research, data extraction, or process automation, Xact Mind's services streamline your operations, saving time and resources.</p>
+              <a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-25 link-underline-opacity-75-hover" href="#">
+              Learn More
+              </a>
+          </div>
+    
+          </div>
+          <div class="btn1">
+            <center><button class="btn btn-primary">View All Services</button></center>
+          </div>
+         
+        </div>
+        
+      </div>
+      
+
+    </sction>
+    <!--section-->
+    <div class="container">
+      <h1 class="h1 text-center"><b>Executive Management</b></h1>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card h-90">
+            <img src="./123.jpeg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h3 class="card-title">Dr.Zahid Mehmood</h3>
+              <h5 class="card-title">Director & CEO</h5>
+              <a href="#" class="card-link">View More</a>
+            </div>
+           
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-90">
+            <img src="./2.jpeg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h3 class="card-title">Dr.Asif Kabir</h3>
+              <h5 class="card-title">Director Xactmind(UK)</h5>
+              <a href="#" class="card-link">View More</a>
+              
+            </div>
+            
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-90">
+            <img src="./3.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h3 class="card-title">Dr.Shujat Ali Rathore</h3>
+              <h5 class="card-title">Chief Technoloy Officer(CTO)</h5>
+              <a href="#" class="card-link">View More</a>
+            </div>  
+          </div>
+          
+          
+        </div>
+       
+      </div>
+      
+    </div>
+   
+   
+    <!--Section 6-->
+    <section class="sec-7">
+      <div class="container py-5">
+        <h1>Project Portfolios</h1>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card h-100">
+            <img src="./sec-6box1.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Dental Clinic Consultation and Appointment Booking Chatbot Assistant</h5>
+              <p class="card-text">Elevate your dental clinic experience with our Smart Sales Assistant Chatbot powered by OpenAI. Seamlessly handle consultation inquiries and appointment bookings, providing patients with convenient and efficient service.</p>
+            </div>
+            <div class="card-footer">
+              <a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-25 link-underline-opacity-75-hover" href="#">
+                Learn More
+                </a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img src="./sec-6box2.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">AI Based Smart Admission Recommendation System</h5>
+              <p class="card-text">Discover the future of admissions with Xact Mind’s AI-Based Smart Admission Recommendation System. Leveraging cutting-edge AI technology, our system analyzes student profiles and academic data to provide personalized recommendations for university admissions.</p>
+            </div>
+            <div class="card-footer">
+              <a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-25 link-underline-opacity-75-hover" href="#">
+                Learn More
+                </a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          
+          <div class="card h-100">
+            <img src="./sec-6box3.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Face Recognition Based Students Attendance Management System</h5>
+              <p class="card-text">Streamline attendance management with Xact Mind’s Face Recognition-Based Students Attendance Management System. Utilizing advanced facial recognition technology, our system ensures accurate and efficient tracking of student attendance, enhancing security and reducing administrative burden.</p>
+            </div>
+            <div class="card-footer">
+              <a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-25 link-underline-opacity-75-hover" href="#">
+                Learn More
+                </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="cards-btn text-center py-5">
+        <button type="button" class="btn btn-primary">View All Case Studies</button>
+      </div>
+
+    </section>
+    <!--Section -->
+    <section>
+      <div class="container">
+        <!-- Carousel wrapper -->
+<div id="carouselMultiItemExample" data-mdb-carousel-init class="carousel slide carousel-dark text-center" data-mdb-ride="carousel">
+  <!-- Controls -->
+  <div class="d-flex justify-content-center mb-4">
+    <button data-mdb-button-init class="carousel-control-prev position-relative" type="button"
+      data-mdb-target="#carouselMultiItemExample" data-mdb-slide="prev">
+      <span class="carousel-control-prev-icon text-body" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button data-mdb-button-init class="carousel-control-next position-relative" type="button"
+      data-mdb-target="#carouselMultiItemExample" data-mdb-slide="next">
+      <span class="carousel-control-next-icon text-body" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <!-- Inner -->
+  <div class="carousel-inner py-4">
+    <!-- Single item -->
+    <div class="carousel-item active">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <img class="rounded-circle shadow-1-strong mb-4"
+              src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp" alt="avatar"
+              style="width: 150px;" />
+            <h5 class="mb-3">Anna Deynah</h5>
+            <p>UX Designer</p>
+            <p class="text-muted">
+              <i class="fas fa-quote-left pe-2"></i>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod eos id
+              officiis hic tenetur quae quaerat ad velit ab hic tenetur.
+            </p>
+            <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
+              <li><i class="fas fa-star fa-sm"></i></li>
+              <li><i class="fas fa-star fa-sm"></i></li>
+              <li><i class="fas fa-star fa-sm"></i></li>
+              <li><i class="fas fa-star fa-sm"></i></li>
+              <li><i class="fas fa-star fa-sm"></i></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 d-none d-lg-block">
+            <img class="rounded-circle shadow-1-strong mb-4"
+              src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(32).webp" alt="avatar"
+              style="width: 150px;" />
+            <h5 class="mb-3">John Doe</h5>
+            <p>Web Developer</p>
+            <p class="text-muted">
+              <i class="fas fa-quote-left pe-2"></i>
+              Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis
+              suscipit laboriosam, nisi ut aliquid commodi.
+            </p>
+            <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
+              <li><i class="fas fa-star fa-sm"></i></li>
+              <li><i class="fas fa-star fa-sm"></i></li>
+              <li><i class="fas fa-star fa-sm"></i></li>
+              <li><i class="fas fa-star fa-sm"></i></li>
+              <li>
+                <i class="fas fa-star-half-alt fa-sm"></i>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 d-none d-lg-block">
+            <img class="rounded-circle shadow-1-strong mb-4"
+              src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(10).webp" alt="avatar"
+              style="width: 150px;" />
+            <h5 class="mb-3">Maria Kate</h5>
+            <p>Photographer</p>
+            <p class="text-muted">
+              <i class="fas fa-quote-left pe-2"></i>
+              At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+              praesentium voluptatum deleniti atque corrupti.
+            </p>
+            <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
+              <li><i class="fas fa-star fa-sm"></i></li>
+              <li><i class="fas fa-star fa-sm"></i></li>
+              <li><i class="fas fa-star fa-sm"></i></li>
+              <li><i class="fas fa-star fa-sm"></i></li>
+              <li><i class="far fa-star fa-sm"></i></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Single item -->
+    <div class="carousel-item">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <img class="rounded-circle shadow-1-strong mb-4"
+              src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(3).webp" alt="avatar"
+              style="width: 150px;" />
+            <h5 class="mb-3">John Doe</h5>
+            <p>UX Designer</p>
+            <p class="text-muted">
+              <i class="fas fa-quote-left pe-2"></i>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod eos id
+              officiis hic tenetur quae quaerat ad velit ab hic tenetur.
+            </p>
+            <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
+              <li><i class="fas fa-star fa-sm"></i></li>
+              <li><i class="fas fa-star fa-sm"></i></li>
+              <li><i class="fas fa-star fa-sm"></i></li>
+              <li><i class="fas fa-star fa-sm"></i></li>
+              <li><i class="fas fa-star fa-sm"></i></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 d-none d-lg-block">
+            <img class="rounded-circle shadow-1-strong mb-4"
+              src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(4).webp" alt="avatar"
+              style="width: 150px;" />
+            <h5 class="mb-3">Alex Rey</h5>
+            <p>Web Developer</p>
+            <p class="text-muted">
+              <i class="fas fa-quote-left pe-2"></i>
+              Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis
+              suscipit laboriosam, nisi ut aliquid commodi.
+            </p>
+            <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
+              <li><i class="fas fa-star fa-sm"></i></li>
+              <li><i class="fas fa-star fa-sm"></i></li>
+              <li><i class="fas fa-star fa-sm"></i></li>
+              <li><i class="fas fa-star fa-sm"></i></li>
+              <li>
+                <i class="fas fa-star-half-alt fa-sm"></i>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 d-none d-lg-block">
+            <img class="rounded-circle shadow-1-strong mb-4"
+              src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(5).webp" alt="avatar"
+              style="width: 150px;" />
+            <h5 class="mb-3">Maria Kate</h5>
+            <p>Photographer</p>
+            <p class="text-muted">
+              <i class="fas fa-quote-left pe-2"></i>
+              At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+              praesentium voluptatum deleniti atque corrupti.
+            </p>
+            <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
+              <li><i class="fas fa-star fa-sm"></i></li>
+              <li><i class="fas fa-star fa-sm"></i></li>
+              <li><i class="fas fa-star fa-sm"></i></li>
+              <li><i class="fas fa-star fa-sm"></i></li>
+              <li><i class="far fa-star fa-sm"></i></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Single item -->
+    <div class="carousel-item">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <img class="rounded-circle shadow-1-strong mb-4"
+              src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(6).webp" alt="avatar"
+              style="width: 150px;" />
+            <h5 class="mb-3">Anna Deynah</h5>
+            <p>UX Designer</p>
+            <p class="text-muted">
+              <i class="fas fa-quote-left pe-2"></i>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod eos id
+              officiis hic tenetur quae quaerat ad velit ab hic tenetur.
+            </p>
+            <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
+              <li><i class="fas fa-star fa-sm"></i></li>
+              <li><i class="fas fa-star fa-sm"></i></li>
+              <li><i class="fas fa-star fa-sm"></i></li>
+              <li><i class="fas fa-star fa-sm"></i></li>
+              <li><i class="fas fa-star fa-sm"></i></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 d-none d-lg-block">
+            <img class="rounded-circle shadow-1-strong mb-4"
+              src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(8).webp" alt="avatar"
+              style="width: 150px;" />
+            <h5 class="mb-3">John Doe</h5>
+            <p>Web Developer</p>
+            <p class="text-muted">
+              <i class="fas fa-quote-left pe-2"></i>
+              Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis
+              suscipit laboriosam, nisi ut aliquid commodi.
+            </p>
+            <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
+              <li><i class="fas fa-star fa-sm"></i></li>
+              <li><i class="fas fa-star fa-sm"></i></li>
+              <li><i class="fas fa-star fa-sm"></i></li>
+              <li><i class="fas fa-star fa-sm"></i></li>
+              <li>
+                <i class="fas fa-star-half-alt fa-sm"></i>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 d-none d-lg-block">
+            <img class="rounded-circle shadow-1-strong mb-4"
+              src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(7).webp" alt="avatar"
+              style="width: 150px;" />
+            <h5 class="mb-3">Maria Kate</h5>
+            <p>Photographer</p>
+            <p class="text-muted">
+              <i class="fas fa-quote-left pe-2"></i>
+              At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+              praesentium voluptatum deleniti atque corrupti.
+            </p>
+            <ul class="list-unstyled d-flex justify-content-center text-warning mb-0">
+              <li><i class="fas fa-star fa-sm"></i></li>
+              <li><i class="fas fa-star fa-sm"></i></li>
+              <li><i class="fas fa-star fa-sm"></i></li>
+              <li><i class="fas fa-star fa-sm"></i></li>
+              <li><i class="far fa-star fa-sm"></i></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Inner -->
+</div>
+<!-- Carousel wrapper -->
+      </div>
+    </section>
+    <!--Section 7-->
+    <section class="sec-7">
+      <div class="container   ">
+        <div class="row bg-blue section-1">
+          
+          
+           
+          <div class="col-md-6  py-8  " style="font-size: 20px; ">
+            <div class="top  " style="background-color: #1461e6; color: white;">
+              <h1 class="">Let's Start a Conversation</h1>
+            </div>
+            <p>
+              For inquiries or to avail of our top-notch AI services, please feel free to contact us through the following channels. We look forward to assisting you.
+            </p>
+            <p><b>Call us at: </b>+92-340-0860641</p>
+            <br>
+          <p><b>UK Contact:</b> +44-7939-444967</p>
+          <div>
+          <h3>Your Benefits:</h3>
+          <p>24/7 Quick Support</p>
+          <p>On-Time Delivery</p>
+          </div>
+          <div>
+            <h3>What happens next?</h3>
+          </div>
+          </div>
+
+            
+         
+        <div class="col-md-6 column py-5 bg-white">
+          <form class="row g-3  py-7 border" style="border-radius: 10px;">
+            <div class="col-md-6">
+              <label for="inputEmail4" class="form-label">First Name<span class="text-danger">*</span></label>
+              <input type="email" class="form-control" id="inputEmail4">
+            </div>
+            <div class="col-md-6">
+              <label for="inputPassword4" class="form-label">Last Name<span class="text-danger">*</span></label>
+              <input type="password" class="form-control" id="inputPassword4">
+            </div>
+            <div class="col-12">
+              <label for="inputAddress" class="form-label">Your Email<span class="text-danger">*</span></label>
+              <input type="text" class="form-control" id="inputAddress" placeholder="">
+            </div>
+            <div class="col-12">
+              <label for="inputAddress2" class="form-label">Phone<span class="text-danger">*</span></label>
+              <input type="text" class="form-control" id="inputAddress2" placeholder="">
+            </div>
+            
+            <div class="col-md-4">
+              <label for="inputState" class="form-label">How Can We Help You?<span class="text-danger">*</span></label>
+              <select id="inputState" class="form-select">
+                <option selected>Choose...</option>
+                <option>...</option>
+              </select>
+            </div>
+            <br><br>
+
+              
+              <div class="form-floating">
+                <textarea class="form-control" placeholder="To asist you tell how can we help you...." id="floatingTextarea2" style="height: 100px"></textarea>
+                <label for="floatingTextarea2">Message</label>
+              </div>
+            
+            
+            <div class="col-md-12 py-3">
+              <button type="submit" class="btn btn-primary ">Submit</button>
+            </div>
+          </form>
+
+        </div>
+        </div>
+      </div>
+
+    </section>
+    <!--Section 8-->
+    <section class="sec-8 text-center">
+      <h1>Frequently Asked Questions</h1>
+      <div class="container py-5 my-4 bg-light">
+        
+        <div class="accordion" id="accordionPanelsStayOpenExample">
+          <div class="accordion-item py-4">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                What is Xact Mind, and what do they specialize in?
+              </button>
+            </h2>
+            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+              <div class="accordion-body">
+                <p>Xact Mind is a leading AI development and solutions company in the UK and Kashmir(Pakistan), specializing in comprehensive AI solutions tailored to meet the evolving needs of customers and businesses across various industries.</p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item py-4 ">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                How can I contact Xact Mind for AI services?
+              </button>
+            </h2>
+            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <p>You can contact Xact Mind via its UK phone number (+44-7939-444967), its Pakistan phone number <strong>(+92-340-0860641)</strong>, <a href=" (info@xactmind.com)"> (info@xactmind.com)</a>.</p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item py-4">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                What services does Xact Mind offer?
+              </button>
+            </h2>
+            <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+              <div class="accordion-body py-5">
+                <p>Xact Mind offers a wide range of services including AI Development, Machine & Deep Learning, Data Analytics & Visualization, Natural Language Processing, Chatbots & Generative AI, Web Scraping & Automation, Prompt Engineering, Web Development, Digital Marketing, UI/UX Design, Mobile App Development, and Custom Software Development.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+            <div class="cards-btn text-center py-5">
+        <button type="button" class="btn btn-primary">View More</button>
+      </div>
+
+    </section>
+    <!--Section 9-->
+    <section class="footer">
+      <div class="container bg-black py-5 my-4">
+        <div class="row">
+          <div class="col-6 py-5 my-4">
+            <h2 class="footer1">Services</h2>
+            <div class="row">
+            <div class="col-3" style="color: white;">
+              <p>AI Development Services</p>
+              <p>Machine and Deep Learning</p>
+              <p>Data Analytics and Visualizations</p>
+              <p>Natural Language Processing</p>
+              <p>Chatbots & Generative AI</p>
+              <p>Web Scraping and Automation</p></div></div>
+            <div class="col-3" style="color:white;">
+
+            </div>
+
+
+
+          </div>
+          <div class="col-6 text-center py-4">
+            <img src="./footer.png" alt="" style="height: 150px;">
+            <div class="cards-btn text-center py-4 ">
+              <button type="button" class="btn btn-primary mt-0 py-0">Schedule Consultation</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    
+    <div class="footer">
+        
+      <div class="footer1">
+    
+      <p>FWM3+J59, Village Kurti, Kotli, AJ&K</p>
+        
+        <p>26 Grange Street, Walsall, England, WS1 3LQ</p>
+      </div>
+      
+      <div class="footer2" style="border-right: 2px black;">
+      
+        <p>Phone(PK): +92-340-0860641</p>   
+        <p>Phone(UK): +44-7939-444967
+         <p></p>Email: info@xactmind.com</p>
+      </div>
+
+      
+ 
+      
+      </div>
+      <div>
+      
+        <h1 class="copyright">&copy; Website All Rights Are Reserved by Alishba  <h1> </div> 
+  
+
+
+</body>
+</html>
