@@ -7,14 +7,13 @@
   <title> Pinterest Clone</title>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
 </head>
 <style>
-  /* styles.css */
   .navbar-brand img {
     height: 40px;
   }
@@ -32,13 +31,17 @@
     border-radius: 20px;
   }
 
+  .form-control:focus {
+    border-color: rgb(2, 104, 2);
+    outline: none;
+    box-shadow: 0 0 5px rgba(134, 239, 134, 0.5);
+  }
+
   .btn-outline-success {
     border-radius: 20px;
   }
 
-  .form-control {
-    outline-: green;
-  }
+
 
   .glass-effect {
 
@@ -50,6 +53,21 @@
     -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.3);
   }
+  .dropdown-item{
+    font-family:Arial, Helvetica;
+    font-weight: bold;
+   
+  }
+  .btn1{
+    background-color:rgb(2, 104, 2) ;
+   
+  }
+  .btn1:hover{
+    color:rgb(148, 153, 148);
+
+  }
+ 
+ 
 </style>
 
 <body>
@@ -58,15 +76,15 @@
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light  shadow py-2 glass-effect ">
-      <a class="navbar-logo" href="#"><i class="fa-brands fa-pinterest" style="color: #ef3434; font-size:70px;"></i></a>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQP2QrCeuSQFAG25amCgWjG65p-2w2h_z6Uv69FYh-I8rCgITRLSD_I9rs6Eq7-DdERZJk&usqp=CAU" alt="logo" style="height: 50px; width: 50px;">
       <div class="container-fluid">
         <!-- logo pintrest -->
 
 
 
         <div class="btns">
-          <button type="button" class="btn btn-success" style="border-radius: 40px;">Home</button>
-          <button type="button" class="btn btn-outline-secondary" style="border-radius: 40px;">Watch</button>
+          <button type="button" class="btn btn-success btn1" style="border-radius: 40px;">Home</button>
+          <button type="button" class="btn btn-light" style="border-radius: 40px;">Watch</button>
         </div>
 
         <!-- Toggle button  -->
@@ -83,8 +101,9 @@
           <form action="search.html" method="get" class="d-flex mx-auto w-50">
             <input class="form-control me-2" type="search" name="query" placeholder="Search here..."
               aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
+            <button class="btn btn-success btn1" style="border-radius: 40px;" type="submit">Search</button>
           </form>
+
 
           <!-- icons -->
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -98,6 +117,54 @@
               <a class="nav-link" href="profile.html"><i class="bi bi-person-circle"></i> Profile</a>
             </li>
           </ul>
+          <div class="btn-group">
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown"
+              aria-expanded="false">
+
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+              <ul class="navbar-nav">
+                <!-- Dropdown -->
+                <li class="nav-item dropdown">
+                  
+                  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                    <li>
+                      <h6 class="dropdown-header" style="font-size: large;">Currently in</h6>
+                    </li>
+                    <li>
+                      <div class="d-flex align-items-center px-3">
+                        <div
+                          class="rounded-circle bg-secondary text-white d-flex align-items-center justify-content-center"
+                          style="width: 40px; height: 40px;">A</div>
+                        <div class="ms-2">
+                          <p class="mb-0 fw-bold  " style="font-size: large;">Alishba</p>
+                          <p class="mb-0 text-muted small">alishba122443@gmail.com</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item py-3 " href="#">Add Pinterest account</a></li>
+                    <li><a class="dropdown-item py-3" href="#">Convert to business</a></li>
+                    <li>
+                      <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item py-3" href="#">Settings</a></li>
+                    <li><a class="dropdown-item py-3" href="#">Home feed tuner</a></li>
+                    <li>
+                      <div class="dropdown-item text-muted small py-2">You can now link your Instagram and other external
+                        accounts to Pinterest.</div>
+                    </li>
+                    <li><a class="dropdown-item py-3" href="#">Claim external accounts</a></li>
+                    <li><a class="dropdown-item py-3" href="#">Install the Windows app</a></li>
+                    <li><a class="dropdown-item py-3" href="#">Logout</a></li>
+                  </ul>
+                </li>
+              </ul>
+            
+
+          </div>
         </div>
       </div>
 
@@ -109,46 +176,47 @@
 
   <div class="container py-5">
     <div class="row">
-      <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+      <div class="col-lg-4 col-md-12 gallery-item mb-4 mb-lg-0">
         <a href="./pin.html"><img
-            src="https://images.pexels.com/photos/1170986/pexels-photo-1170986.jpeg?auto=compress&cs=tinysrgb&w=600y&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=768"
+            src="https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?auto=compress&cs=tinysrgb&w=800&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=768"
             class="w-100 img-fluid rounded mb-4" alt="Photo by Marc Pell"
             srcset="https://images.unsplash.com/photo-1547140741-00d6fd251528?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=768 1080w, https://images.unsplash.com/photo-1547140741-00d6fd251528??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=150 150w, https://images.unsplash.com/photo-1547140741-00d6fd251528??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=300 300w, https://images.unsplash.com/photo-1547140741-00d6fd251528??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=768 768w, https://images.unsplash.com/photo-1547140741-00d6fd251528??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1024 1024w"
             sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="768" loading="lazy"></a>
+            
 
-        <img
-          src="https://images.unsplash.com/photo-1508193638397-1c4234db14d8?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8M3x8Zm9yZXN0fGVufDB8MXx8fDE2MzQ5ODc5ODc&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080"
-          class="w-100 img-fluid rounded mb-4" alt="Photo by Federico Bottos"
-          srcset="https://images.unsplash.com/photo-1508193638397-1c4234db14d8?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8M3x8Zm9yZXN0fGVufDB8MXx8fDE2MzQ5ODc5ODc&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080 1080w, https://images.unsplash.com/photo-1508193638397-1c4234db14d8??crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8M3x8Zm9yZXN0fGVufDB8MXx8fDE2MzQ5ODc5ODc&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=150 150w, https://images.unsplash.com/photo-1508193638397-1c4234db14d8??crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8M3x8Zm9yZXN0fGVufDB8MXx8fDE2MzQ5ODc5ODc&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=300 300w, https://images.unsplash.com/photo-1508193638397-1c4234db14d8??crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8M3x8Zm9yZXN0fGVufDB8MXx8fDE2MzQ5ODc5ODc&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=768 768w, https://images.unsplash.com/photo-1508193638397-1c4234db14d8??crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8M3x8Zm9yZXN0fGVufDB8MXx8fDE2MzQ5ODc5ODc&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1024 1024w"
-          sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="" loading="lazy">
+        <a href="./pin.html"><img
+            src="https://images.unsplash.com/photo-1508193638397-1c4234db14d8?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8M3x8Zm9yZXN0fGVufDB8MXx8fDE2MzQ5ODc5ODc&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080"
+            class="w-100 img-fluid rounded mb-4" alt="Photo by Federico Bottos"
+            srcset="https://images.unsplash.com/photo-1508193638397-1c4234db14d8?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8M3x8Zm9yZXN0fGVufDB8MXx8fDE2MzQ5ODc5ODc&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080 1080w, https://images.unsplash.com/photo-1508193638397-1c4234db14d8??crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8M3x8Zm9yZXN0fGVufDB8MXx8fDE2MzQ5ODc5ODc&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=150 150w, https://images.unsplash.com/photo-1508193638397-1c4234db14d8??crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8M3x8Zm9yZXN0fGVufDB8MXx8fDE2MzQ5ODc5ODc&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=300 300w, https://images.unsplash.com/photo-1508193638397-1c4234db14d8??crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8M3x8Zm9yZXN0fGVufDB8MXx8fDE2MzQ5ODc5ODc&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=768 768w, https://images.unsplash.com/photo-1508193638397-1c4234db14d8??crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8M3x8Zm9yZXN0fGVufDB8MXx8fDE2MzQ5ODc5ODc&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1024 1024w"
+            sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="" loading="lazy"></a>
+      </div>
+
+      <div class="col-lg-4  gallery-item mb-4 mb-lg-0">
+        <a href="./pin.html"><img
+            src="https://images.unsplash.com/photo-1514735555661-d3278da9d5ca?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDF8fHwxNjM0OTg5MzUw&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080"
+            class="w-100 img-fluid rounded mb-4" alt="Photo by Nathan Dumlao"
+            srcset="https://images.unsplash.com/photo-1514735555661-d3278da9d5ca?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDF8fHwxNjM0OTg5MzUw&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080 1080w, https://images.unsplash.com/photo-1514735555661-d3278da9d5ca??crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDF8fHwxNjM0OTg5MzUw&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=150 150w, https://images.unsplash.com/photo-1514735555661-d3278da9d5ca??crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDF8fHwxNjM0OTg5MzUw&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=300 300w, https://images.unsplash.com/photo-1514735555661-d3278da9d5ca??crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDF8fHwxNjM0OTg5MzUw&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=768 768w, https://images.unsplash.com/photo-1514735555661-d3278da9d5ca??crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDF8fHwxNjM0OTg5MzUw&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1024 1024w"
+            sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="" loading="lazy"></a>
+
+        <a href="./pin.html"><img
+            src="https://images.unsplash.com/photo-1421789665209-c9b2a435e3dc?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTd8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=768"
+            class="w-100 img-fluid rounded mb-4" alt="Photo by Matthew Smith"
+            srcset="https://images.unsplash.com/photo-1421789665209-c9b2a435e3dc?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTd8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=768 1080w, https://images.unsplash.com/photo-1421789665209-c9b2a435e3dc??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTd8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=150 150w, https://images.unsplash.com/photo-1421789665209-c9b2a435e3dc??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTd8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=300 300w, https://images.unsplash.com/photo-1421789665209-c9b2a435e3dc??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTd8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=768 768w, https://images.unsplash.com/photo-1421789665209-c9b2a435e3dc??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTd8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1024 1024w"
+            sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="768" loading="lazy"></a>
       </div>
 
       <div class="col-lg-4 mb-4 mb-lg-0">
-        <img
-          src="https://images.unsplash.com/photo-1514735555661-d3278da9d5ca?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDF8fHwxNjM0OTg5MzUw&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080"
-          class="w-100 img-fluid rounded mb-4" alt="Photo by Nathan Dumlao"
-          srcset="https://images.unsplash.com/photo-1514735555661-d3278da9d5ca?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDF8fHwxNjM0OTg5MzUw&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080 1080w, https://images.unsplash.com/photo-1514735555661-d3278da9d5ca??crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDF8fHwxNjM0OTg5MzUw&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=150 150w, https://images.unsplash.com/photo-1514735555661-d3278da9d5ca??crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDF8fHwxNjM0OTg5MzUw&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=300 300w, https://images.unsplash.com/photo-1514735555661-d3278da9d5ca??crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDF8fHwxNjM0OTg5MzUw&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=768 768w, https://images.unsplash.com/photo-1514735555661-d3278da9d5ca??crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDF8fHwxNjM0OTg5MzUw&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1024 1024w"
-          sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="" loading="lazy">
+        <a href="./pin.html"><img
+            src="https://images.unsplash.com/photo-1511497584788-876760111969?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NHx8Zm9yZXN0fGVufDB8MHx8fDE2MzQ5ODc4NTY&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=768"
+            class="w-100 img-fluid rounded mb-4" alt="Photo by Sergei A"
+            srcset="https://images.unsplash.com/photo-1511497584788-876760111969?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NHx8Zm9yZXN0fGVufDB8MHx8fDE2MzQ5ODc4NTY&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=768 1080w, https://images.unsplash.com/photo-1511497584788-876760111969??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NHx8Zm9yZXN0fGVufDB8MHx8fDE2MzQ5ODc4NTY&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=150 150w, https://images.unsplash.com/photo-1511497584788-876760111969??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NHx8Zm9yZXN0fGVufDB8MHx8fDE2MzQ5ODc4NTY&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=300 300w, https://images.unsplash.com/photo-1511497584788-876760111969??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NHx8Zm9yZXN0fGVufDB8MHx8fDE2MzQ5ODc4NTY&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=768 768w, https://images.unsplash.com/photo-1511497584788-876760111969??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NHx8Zm9yZXN0fGVufDB8MHx8fDE2MzQ5ODc4NTY&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1024 1024w"
+            sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="768" loading="lazy"></a>
 
-        <img
-          src="https://images.unsplash.com/photo-1421789665209-c9b2a435e3dc?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTd8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=768"
-          class="w-100 img-fluid rounded mb-4" alt="Photo by Matthew Smith"
-          srcset="https://images.unsplash.com/photo-1421789665209-c9b2a435e3dc?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTd8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=768 1080w, https://images.unsplash.com/photo-1421789665209-c9b2a435e3dc??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTd8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=150 150w, https://images.unsplash.com/photo-1421789665209-c9b2a435e3dc??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTd8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=300 300w, https://images.unsplash.com/photo-1421789665209-c9b2a435e3dc??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTd8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=768 768w, https://images.unsplash.com/photo-1421789665209-c9b2a435e3dc??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTd8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1024 1024w"
-          sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="768" loading="lazy">
-      </div>
-
-      <div class="col-lg-4 mb-4 mb-lg-0">
-        <img
-          src="https://images.unsplash.com/photo-1511497584788-876760111969?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NHx8Zm9yZXN0fGVufDB8MHx8fDE2MzQ5ODc4NTY&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=768"
-          class="w-100 img-fluid rounded mb-4" alt="Photo by Sergei A"
-          srcset="https://images.unsplash.com/photo-1511497584788-876760111969?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NHx8Zm9yZXN0fGVufDB8MHx8fDE2MzQ5ODc4NTY&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=768 1080w, https://images.unsplash.com/photo-1511497584788-876760111969??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NHx8Zm9yZXN0fGVufDB8MHx8fDE2MzQ5ODc4NTY&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=150 150w, https://images.unsplash.com/photo-1511497584788-876760111969??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NHx8Zm9yZXN0fGVufDB8MHx8fDE2MzQ5ODc4NTY&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=300 300w, https://images.unsplash.com/photo-1511497584788-876760111969??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NHx8Zm9yZXN0fGVufDB8MHx8fDE2MzQ5ODc4NTY&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=768 768w, https://images.unsplash.com/photo-1511497584788-876760111969??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NHx8Zm9yZXN0fGVufDB8MHx8fDE2MzQ5ODc4NTY&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1024 1024w"
-          sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="768" loading="lazy">
-
-        <img
-          src="https://images.unsplash.com/photo-1487111023822-2e903e12f6f0?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8Nnx8Zm9yZXN0fGVufDB8MXx8fDE2MzQ5ODc5ODc&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080"
-          class="w-100 img-fluid rounded mb-4" alt="Photo by Filip Zrnzević"
-          srcset="https://images.unsplash.com/photo-1487111023822-2e903e12f6f0?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8Nnx8Zm9yZXN0fGVufDB8MXx8fDE2MzQ5ODc5ODc&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080 1080w, https://images.unsplash.com/photo-1487111023822-2e903e12f6f0??crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8Nnx8Zm9yZXN0fGVufDB8MXx8fDE2MzQ5ODc5ODc&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=150 150w, https://images.unsplash.com/photo-1487111023822-2e903e12f6f0??crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8Nnx8Zm9yZXN0fGVufDB8MXx8fDE2MzQ5ODc5ODc&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=300 300w, https://images.unsplash.com/photo-1487111023822-2e903e12f6f0??crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8Nnx8Zm9yZXN0fGVufDB8MXx8fDE2MzQ5ODc5ODc&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=768 768w, https://images.unsplash.com/photo-1487111023822-2e903e12f6f0??crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8Nnx8Zm9yZXN0fGVufDB8MXx8fDE2MzQ5ODc5ODc&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1024 1024w"
-          sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="" loading="lazy">
+        <a href="./pin.html"><img
+            src="https://images.unsplash.com/photo-1487111023822-2e903e12f6f0?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8Nnx8Zm9yZXN0fGVufDB8MXx8fDE2MzQ5ODc5ODc&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080"
+            class="w-100 img-fluid rounded mb-4" alt="Photo by Filip Zrnzević"
+            srcset="https://images.unsplash.com/photo-1487111023822-2e903e12f6f0?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8Nnx8Zm9yZXN0fGVufDB8MXx8fDE2MzQ5ODc5ODc&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080 1080w, https://images.unsplash.com/photo-1487111023822-2e903e12f6f0??crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8Nnx8Zm9yZXN0fGVufDB8MXx8fDE2MzQ5ODc5ODc&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=150 150w, https://images.unsplash.com/photo-1487111023822-2e903e12f6f0??crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8Nnx8Zm9yZXN0fGVufDB8MXx8fDE2MzQ5ODc5ODc&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=300 300w, https://images.unsplash.com/photo-1487111023822-2e903e12f6f0??crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8Nnx8Zm9yZXN0fGVufDB8MXx8fDE2MzQ5ODc5ODc&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=768 768w, https://images.unsplash.com/photo-1487111023822-2e903e12f6f0??crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8Nnx8Zm9yZXN0fGVufDB8MXx8fDE2MzQ5ODc5ODc&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1024 1024w"
+            sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="" loading="lazy"></a>
       </div>
     </div>
   </div>
@@ -158,57 +226,48 @@
   <div class="container py-5">
     <div class="row">
       <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-        <img
-          src="https://images.unsplash.com/photo-1547140741-00d6fd251528?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=768"
-          class="w-100 img-fluid rounded mb-4" alt="Photo by Marc Pell"
-          srcset="https://images.unsplash.com/photo-1547140741-00d6fd251528?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=768 1080w, https://images.unsplash.com/photo-1547140741-00d6fd251528??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=150 150w, https://images.unsplash.com/photo-1547140741-00d6fd251528??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=300 300w, https://images.unsplash.com/photo-1547140741-00d6fd251528??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=768 768w, https://images.unsplash.com/photo-1547140741-00d6fd251528??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1024 1024w"
-          sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="768" loading="lazy">
+        <a href="./pin.html"><img
+            src="https://images.unsplash.com/photo-1547140741-00d6fd251528?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=768"
+            class="w-100 img-fluid rounded mb-4" alt="Photo by Marc Pell"
+            srcset="https://images.unsplash.com/photo-1547140741-00d6fd251528?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=768 1080w, https://images.unsplash.com/photo-1547140741-00d6fd251528??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=150 150w, https://images.unsplash.com/photo-1547140741-00d6fd251528??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=300 300w, https://images.unsplash.com/photo-1547140741-00d6fd251528??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=768 768w, https://images.unsplash.com/photo-1547140741-00d6fd251528??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1024 1024w"
+            sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="768" loading="lazy"></a>
 
-        <img
-          src="https://images.unsplash.com/photo-1508193638397-1c4234db14d8?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8M3x8Zm9yZXN0fGVufDB8MXx8fDE2MzQ5ODc5ODc&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080"
-          class="w-100 img-fluid rounded mb-4" alt="Photo by Federico Bottos"
-          srcset="https://images.unsplash.com/photo-1508193638397-1c4234db14d8?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8M3x8Zm9yZXN0fGVufDB8MXx8fDE2MzQ5ODc5ODc&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080 1080w, https://images.unsplash.com/photo-1508193638397-1c4234db14d8??crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8M3x8Zm9yZXN0fGVufDB8MXx8fDE2MzQ5ODc5ODc&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=150 150w, https://images.unsplash.com/photo-1508193638397-1c4234db14d8??crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8M3x8Zm9yZXN0fGVufDB8MXx8fDE2MzQ5ODc5ODc&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=300 300w, https://images.unsplash.com/photo-1508193638397-1c4234db14d8??crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8M3x8Zm9yZXN0fGVufDB8MXx8fDE2MzQ5ODc5ODc&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=768 768w, https://images.unsplash.com/photo-1508193638397-1c4234db14d8??crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8M3x8Zm9yZXN0fGVufDB8MXx8fDE2MzQ5ODc5ODc&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1024 1024w"
-          sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="" loading="lazy">
+        <a href="./pin.html"><img
+            src="https://images.unsplash.com/photo-1508193638397-1c4234db14d8?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8M3x8Zm9yZXN0fGVufDB8MXx8fDE2MzQ5ODc5ODc&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080"
+            class="w-100 img-fluid rounded mb-4" alt="Photo by Federico Bottos"
+            srcset="https://images.unsplash.com/photo-1508193638397-1c4234db14d8?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8M3x8Zm9yZXN0fGVufDB8MXx8fDE2MzQ5ODc5ODc&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080 1080w, https://images.unsplash.com/photo-1508193638397-1c4234db14d8??crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8M3x8Zm9yZXN0fGVufDB8MXx8fDE2MzQ5ODc5ODc&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=150 150w, https://images.unsplash.com/photo-1508193638397-1c4234db14d8??crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8M3x8Zm9yZXN0fGVufDB8MXx8fDE2MzQ5ODc5ODc&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=300 300w, https://images.unsplash.com/photo-1508193638397-1c4234db14d8??crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8M3x8Zm9yZXN0fGVufDB8MXx8fDE2MzQ5ODc5ODc&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=768 768w, https://images.unsplash.com/photo-1508193638397-1c4234db14d8??crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8M3x8Zm9yZXN0fGVufDB8MXx8fDE2MzQ5ODc5ODc&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1024 1024w"
+            sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="" loading="lazy"></a>
       </div>
 
       <div class="col-lg-4 mb-4 mb-lg-0">
-        <img
-          src="https://images.unsplash.com/photo-1514735555661-d3278da9d5ca?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDF8fHwxNjM0OTg5MzUw&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080"
-          class="w-100 img-fluid rounded mb-4" alt="Photo by Nathan Dumlao"
-          srcset="https://images.unsplash.com/photo-1514735555661-d3278da9d5ca?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDF8fHwxNjM0OTg5MzUw&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080 1080w, https://images.unsplash.com/photo-1514735555661-d3278da9d5ca??crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDF8fHwxNjM0OTg5MzUw&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=150 150w, https://images.unsplash.com/photo-1514735555661-d3278da9d5ca??crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDF8fHwxNjM0OTg5MzUw&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=300 300w, https://images.unsplash.com/photo-1514735555661-d3278da9d5ca??crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDF8fHwxNjM0OTg5MzUw&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=768 768w, https://images.unsplash.com/photo-1514735555661-d3278da9d5ca??crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDF8fHwxNjM0OTg5MzUw&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1024 1024w"
-          sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="" loading="lazy">
+        <a href="./pin.html"><img
+            src="https://images.unsplash.com/photo-1514735555661-d3278da9d5ca?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDF8fHwxNjM0OTg5MzUw&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080"
+            class="w-100 img-fluid rounded mb-4" alt="Photo by Nathan Dumlao"
+            srcset="https://images.unsplash.com/photo-1514735555661-d3278da9d5ca?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDF8fHwxNjM0OTg5MzUw&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080 1080w, https://images.unsplash.com/photo-1514735555661-d3278da9d5ca??crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDF8fHwxNjM0OTg5MzUw&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=150 150w, https://images.unsplash.com/photo-1514735555661-d3278da9d5ca??crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDF8fHwxNjM0OTg5MzUw&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=300 300w, https://images.unsplash.com/photo-1514735555661-d3278da9d5ca??crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDF8fHwxNjM0OTg5MzUw&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=768 768w, https://images.unsplash.com/photo-1514735555661-d3278da9d5ca??crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTR8fGZvcmVzdHxlbnwwfDF8fHwxNjM0OTg5MzUw&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1024 1024w"
+            sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="" loading="lazy"></a>
 
-        <img
-          src="https://images.unsplash.com/photo-1421789665209-c9b2a435e3dc?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTd8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=768"
-          class="w-100 img-fluid rounded mb-4" alt="Photo by Matthew Smith"
-          srcset="https://images.unsplash.com/photo-1421789665209-c9b2a435e3dc?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTd8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=768 1080w, https://images.unsplash.com/photo-1421789665209-c9b2a435e3dc??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTd8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=150 150w, https://images.unsplash.com/photo-1421789665209-c9b2a435e3dc??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTd8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=300 300w, https://images.unsplash.com/photo-1421789665209-c9b2a435e3dc??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTd8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=768 768w, https://images.unsplash.com/photo-1421789665209-c9b2a435e3dc??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTd8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1024 1024w"
-          sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="768" loading="lazy">
+        <a href="./pin.html"><img
+            src="https://images.unsplash.com/photo-1421789665209-c9b2a435e3dc?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTd8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=768"
+            class="w-100 img-fluid rounded mb-4" alt="Photo by Matthew Smith"
+            srcset="https://images.unsplash.com/photo-1421789665209-c9b2a435e3dc?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTd8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=768 1080w, https://images.unsplash.com/photo-1421789665209-c9b2a435e3dc??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTd8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=150 150w, https://images.unsplash.com/photo-1421789665209-c9b2a435e3dc??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTd8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=300 300w, https://images.unsplash.com/photo-1421789665209-c9b2a435e3dc??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTd8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=768 768w, https://images.unsplash.com/photo-1421789665209-c9b2a435e3dc??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8MTd8fGZvcmVzdHxlbnwwfDB8fHwxNjM0OTg5MzI1&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1024 1024w"
+            sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="768" loading="lazy"></a>
       </div>
 
       <div class="col-lg-4 mb-4 mb-lg-0">
-        <img
-          src="https://images.unsplash.com/photo-1511497584788-876760111969?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NHx8Zm9yZXN0fGVufDB8MHx8fDE2MzQ5ODc4NTY&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=768"
-          class="w-100 img-fluid rounded mb-4" alt="Photo by Sergei A"
-          srcset="https://images.unsplash.com/photo-1511497584788-876760111969?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NHx8Zm9yZXN0fGVufDB8MHx8fDE2MzQ5ODc4NTY&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=768 1080w, https://images.unsplash.com/photo-1511497584788-876760111969??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NHx8Zm9yZXN0fGVufDB8MHx8fDE2MzQ5ODc4NTY&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=150 150w, https://images.unsplash.com/photo-1511497584788-876760111969??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NHx8Zm9yZXN0fGVufDB8MHx8fDE2MzQ5ODc4NTY&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=300 300w, https://images.unsplash.com/photo-1511497584788-876760111969??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NHx8Zm9yZXN0fGVufDB8MHx8fDE2MzQ5ODc4NTY&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=768 768w, https://images.unsplash.com/photo-1511497584788-876760111969??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NHx8Zm9yZXN0fGVufDB8MHx8fDE2MzQ5ODc4NTY&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1024 1024w"
-          sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="768" loading="lazy">
+        <a href="./pin.html"><img
+            src="https://images.unsplash.com/photo-1511497584788-876760111969?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NHx8Zm9yZXN0fGVufDB8MHx8fDE2MzQ5ODc4NTY&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=768"
+            class="w-100 img-fluid rounded mb-4" alt="Photo by Sergei A"
+            srcset="https://images.unsplash.com/photo-1511497584788-876760111969?crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NHx8Zm9yZXN0fGVufDB8MHx8fDE2MzQ5ODc4NTY&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080&amp;h=768 1080w, https://images.unsplash.com/photo-1511497584788-876760111969??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NHx8Zm9yZXN0fGVufDB8MHx8fDE2MzQ5ODc4NTY&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=150 150w, https://images.unsplash.com/photo-1511497584788-876760111969??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NHx8Zm9yZXN0fGVufDB8MHx8fDE2MzQ5ODc4NTY&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=300 300w, https://images.unsplash.com/photo-1511497584788-876760111969??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NHx8Zm9yZXN0fGVufDB8MHx8fDE2MzQ5ODc4NTY&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=768 768w, https://images.unsplash.com/photo-1511497584788-876760111969??crop=entropy&amp;cs=tinysrgb&amp;fit=crop&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8NHx8Zm9yZXN0fGVufDB8MHx8fDE2MzQ5ODc4NTY&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1024 1024w"
+            sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="768" loading="lazy"></a>
 
-        <img
-          src="https://images.unsplash.com/photo-1487111023822-2e903e12f6f0?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8Nnx8Zm9yZXN0fGVufDB8MXx8fDE2MzQ5ODc5ODc&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080"
-          class="w-100 img-fluid rounded mb-4" alt="Photo by Filip Zrnzević"
-          srcset="https://images.unsplash.com/photo-1487111023822-2e903e12f6f0?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8Nnx8Zm9yZXN0fGVufDB8MXx8fDE2MzQ5ODc5ODc&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080 1080w, https://images.unsplash.com/photo-1487111023822-2e903e12f6f0??crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8Nnx8Zm9yZXN0fGVufDB8MXx8fDE2MzQ5ODc5ODc&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=150 150w, https://images.unsplash.com/photo-1487111023822-2e903e12f6f0??crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8Nnx8Zm9yZXN0fGVufDB8MXx8fDE2MzQ5ODc5ODc&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=300 300w, https://images.unsplash.com/photo-1487111023822-2e903e12f6f0??crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8Nnx8Zm9yZXN0fGVufDB8MXx8fDE2MzQ5ODc5ODc&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=768 768w, https://images.unsplash.com/photo-1487111023822-2e903e12f6f0??crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8Nnx8Zm9yZXN0fGVufDB8MXx8fDE2MzQ5ODc5ODc&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1024 1024w"
-          sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="" loading="lazy">
+        <a href="./pin.html"><img
+            src="https://images.unsplash.com/photo-1487111023822-2e903e12f6f0?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8Nnx8Zm9yZXN0fGVufDB8MXx8fDE2MzQ5ODc5ODc&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080"
+            class="w-100 img-fluid rounded mb-4" alt="Photo by Filip Zrnzević"
+            srcset="https://images.unsplash.com/photo-1487111023822-2e903e12f6f0?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8Nnx8Zm9yZXN0fGVufDB8MXx8fDE2MzQ5ODc5ODc&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1080 1080w, https://images.unsplash.com/photo-1487111023822-2e903e12f6f0??crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8Nnx8Zm9yZXN0fGVufDB8MXx8fDE2MzQ5ODc5ODc&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=150 150w, https://images.unsplash.com/photo-1487111023822-2e903e12f6f0??crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8Nnx8Zm9yZXN0fGVufDB8MXx8fDE2MzQ5ODc5ODc&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=300 300w, https://images.unsplash.com/photo-1487111023822-2e903e12f6f0??crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8Nnx8Zm9yZXN0fGVufDB8MXx8fDE2MzQ5ODc5ODc&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=768 768w, https://images.unsplash.com/photo-1487111023822-2e903e12f6f0??crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=MnwzNzg0fDB8MXxzZWFyY2h8Nnx8Zm9yZXN0fGVufDB8MXx8fDE2MzQ5ODc5ODc&amp;ixlib=rb-1.2.1&amp;q=80&amp;w=1024 1024w"
+            sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="" loading="lazy"></a>
       </div>
     </div>
   </div>
-
-
-
-
-
-
-
-
-
 </body>
 
 </html>
